@@ -1,3 +1,49 @@
 *{
 	font-family: arial;
+	margin: 0;
+	padding: 0;
+}
+
+header{
+	background-color: black;
+	height: 130px;
+	vertical-align: center;
+	text-align: center;
+}
+
+header>h1{
+	color: white;
+	line-height:130px;
+}
+
+header nav>ul{
+	display: flex;
+	flex-direction: row;
+
+}
+
+header nav>ul>li{
+	padding: 20px;
+	background-color: grey;
+	list-style-type: none;
+	flex: 1 1 auto;
+	transition: all 0.5s ease;
+}
+
+header nav>ul>li:hover{
+	background-color: black;
+}
+
+header nav>ul>li>a{
+	text-decoration: none;
+	color: white;
+}
+
+.clicker{
+	margin-top: 80px;
+}
+
+.clicker>img{
+	width: 500px;
+	height: auto;
 }
