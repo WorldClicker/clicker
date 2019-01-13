@@ -38,7 +38,7 @@
 		<?php
 
 		if (!empty($_POST)) {
-			include_once("treat.php");
+			include_once("treatLogin.php");
 		}
 
 		?>

@@ -29,11 +29,11 @@
 	<body onload="initElement();">
 
 		<header>
-		<h1>World Clicker</h1>
+		<h1><a href="game.php">World Clicker</a></h1>
 
 		<nav>
 			<ul>
-				<li><a href="">LeaderBoard</a></li>
+				<li><a href="lb.php">LeaderBoard</a></li>
 				<li><a href="">Twitter</a></li>
 			</ul>
 		</nav>

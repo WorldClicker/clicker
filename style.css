@@ -11,9 +11,10 @@ header{
 	text-align: center;
 }
 
-header>h1{
+header>h1 a{
 	color: white;
 	line-height:130px;
+	text-decoration: none;
 }
 
 header nav>ul{
@@ -44,8 +45,10 @@ header nav>ul>li>a{
 }
 
 .clicker>img{
+	margin: auto;
 	width: 500px;
 	height: auto;
+	display: block;
 }
 
 
@@ -112,4 +115,10 @@ header nav>ul>li>a{
 	text-align: center;
 	font-size: 20px;
 	color: red;
+}
+
+.lb{
+	margin-top: 80px;
+	text-align: center;
+	font-size: 20px;
 }

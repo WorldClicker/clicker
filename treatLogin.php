@@ -9,34 +9,38 @@
 	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
-function newPlayerSQL($pdo,$user,$password)
+function recherchePlayer($pdo,$user,$mdp)
 {
+	$validation = false;
 
-	$req = $pdo->prepare("INSERT INTO joueur (pseudo_joueur,motDePasse_joueur) VALUES (:pseudo_joueur, :motDePasse_joueur)");
-		$req->execute(array(
-			"pseudo_joueur" => $user,
-			"motDePasse_joueur" => $password
-		));
+	$motdepasse = $pdo->query("SELECT motdepasse_joueur FROM joueur WHERE pseudo_joueur = '$user'")->fetchAll();
+
+	for ($i=0; $i < count($motdepasse); $i++) { 
+		
+		if ($motdepasse[$i][0] == $mdp) {
+			$validation = true;
+		}
+
+	}
+	if ($validation == true)
+		return true;
+	else
+		return false;
 }
-
-
 
 $erreur = false;
-if (empty($_POST['pseudo'])) {
+
+echo "<p class='error'>";
+
+if (!recherchePlayer($pdo,$_POST['pseudo'],$_POST['password'])) {
 	$erreur = true;
-	echo "Veuillez renseigner un pseudo <br>";
+	echo "Pseudo et/ou mot de passe incorrect";
 }
 
-if (empty($_POST['password'])) {
-	$erreur = true;
-	echo "Veuillez renseigner un mot de passe <br>";
-}
+echo "</p>";
 
 if ($erreur == false) {
-	newPlayerSQL($pdo,$_POST['pseudo'],$_POST['password']);
-	echo "Votre compte à bien été créé";
-
-	include_once("game.php");
+	header('Location: game.php');
 }
 
 
