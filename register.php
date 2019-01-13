@@ -8,17 +8,28 @@
 
 		<nav>
 			<ul>
-				<li><a href="login.php">Vous avez déjà un compte ? Se connecter</a></li>
+				<li>Vous avez déjà un compte ? <a href="login.php">Se connecter</a></li>
 			</ul>
 		</nav>
 
-		<form action="index.php" method="POST">
+	<form action="register.php" method="POST">
 		
-		<label for="pseudo">Pseudo :</label>
-		<input type="text" name="pseudo" id="pseudo">
+	<table>
 
-		<label for="password">Mot de passe :</label>
-		<input type="password" name="password" id="password">
+		<td><label for="pseudo">Pseudo :</label></td>
+		<td><input type="text" name="pseudo" id="pseudo"
+		<?php
+		if (!empty($_POST['pseudo'])) {
+			echo "value='".$_POST['pseudo']."'";
+		}
+		?>
+		></td><tr>
+		<br>
+		<td><label for="password">Mot de passe :</label></td>
+		<td><input type="password" name="password" id="password"></td>
+		<br>
+
+	</table>
 
 		<input type="submit" name="valider" value="Valider">
 
@@ -27,7 +38,7 @@
 		<?php
 
 		if (!empty($_POST)) {
-			include_once("treat.php");
+			include_once("treatRegister.php");
 		}
 
 		?>
