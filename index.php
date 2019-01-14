@@ -18,7 +18,7 @@
 			 	 	countClick = Number(countClick) + 1;
 			 	 	alert(countClick);
 			 	 	document.getElementById("inputVar").value = countClick;
-
+			 	 	document.write(countClick);
 
 			 	 };
 			};
