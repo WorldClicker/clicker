@@ -11,9 +11,10 @@ header{
 	text-align: center;
 }
 
-header>h1{
+header>h1 a{
 	color: white;
 	line-height:130px;
+	text-decoration: none;
 }
 
 header nav>ul{
@@ -44,6 +45,80 @@ header nav>ul>li>a{
 }
 
 .clicker>img{
+	margin: auto;
 	width: 500px;
 	height: auto;
+	display: block;
+}
+
+
+.connexion nav{
+	background-color: black;
+	height: 70px;
+	text-align: center;
+}
+
+.connexion nav li{
+	list-style-type: none;
+	color: white;
+	font-weight: bold;
+	font-size: 25px;
+}
+
+.connexion nav a{	
+	text-decoration: underline orange;
+	color: white;
+	font-weight: bold;
+	font-size: 25px;
+	transition: all 0.2s ease;
+}
+
+.connexion nav a:hover{
+	color: orange;
+}
+
+.connexion form{
+	margin:auto;
+	text-align: center;
+	font-size: 25px;
+}
+
+.connexion form table{
+	margin:auto;
+	font-size: 25px;
+}
+
+.connexion input{
+	padding: 5px;
+	font-size: 25px;
+	border: none;
+}
+
+.connexion input[type=text],input[type=password]{
+	border-bottom: 1px solid black;
+}
+
+.connexion input[type=submit]{
+	margin-top: 10px;
+	transition: all 0.2s ease;
+}
+
+.connexion input[type=submit]:hover{
+	background-color: black;
+	color: white;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+
+.error{
+	text-align: center;
+	font-size: 20px;
+	color: red;
+}
+
+.lb{
+	margin-top: 80px;
+	text-align: center;
+	font-size: 20px;
 }
